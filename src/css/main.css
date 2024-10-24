@@ -1,0 +1,168 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for the entire app fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Todo App container */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    animation: slideIn 0.7s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: fadeInForm 1s ease;
+}
+
+@keyframes fadeInForm {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Input field */
+input {
+    padding: 12px 15px;
+    width: 280px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 12px 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Display component */
+.display {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInDisplay 0.8s ease;
+}
+
+@keyframes fadeInDisplay {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.display:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.display h1 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    animation: slideInTask 1s ease;
+}
+
+@keyframes slideInTask {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icons svg {
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons svg:hover {
+    transform: scale(1.2);
+    color: #007BFF;
+}
+
+@keyframes fadeInIcons {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Time component */
+.time {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInTime 1s ease-in;
+}
+
+@keyframes fadeInTime {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Extra interaction animations */
+.display:active {
+    transform: scale(0.98);
+}
+.clear{
+    background-color: rgb(192, 56, 56);
+}
+.clear:hover{
+    background-color: rgb(109, 11, 11);
+}
